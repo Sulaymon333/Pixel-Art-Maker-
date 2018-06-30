@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pixel Art Maker!</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="img/cropFav.gif" type="image/gif" sizes="16x16">
+</head>
+<body>
+    <nav class="navbar">
+        <span class="open-slide">
+          <a href="#" onclick="openSlideMenu()" class="tooltip" title="Please open the menu to build your Grid">
+            <svg width="30" height="30">
+                <path d="M0,5 30,5" stroke="#fff" stroke-width="5"/>
+                <path d="M0,14 30,14" stroke="#fff" stroke-width="5"/>
+                <path d="M0,23 30,23" stroke="#fff" stroke-width="5"/>
+            </svg>
+          </a>
+        </span>
+        <h1>Lab: Pixel Art Maker</h1>
+      </nav>
+
+
+      <div id="side-menu" class="side-nav">
+        <a href="#" class="btn-close" onclick="closeSlideMenu()">&times;</a>
+        <div class="settings">
+          <h2>Choose Grid Size</h2>
+          <form id="sizePicker">
+              <h2>Grid Height:</h2>
+              <input type="number" id="inputHeight" name="height" min="1" value="10" max="40">
+              <h2>Grid Width:</h2>
+              <input type="number" id="inputWeight" name="width" min="1" value="10" max="40">
+              <input type="submit" id="submitBtn">
+              <input type="reset" value="Reset" id="resetBtn">
+          </form>
+          <h2>Pick a Color</h2>
+          <input type="color" id="colorPicker">
+        </div>
+      </div>
+      
+      <div id="output">
+        <h2>Design Canvas</h2>
+        <table id="pixelCanvas"></table>
+      </div>
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+  
+    <script src="app.js"></script>
+</body>
+</html>
